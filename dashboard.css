@@ -7,11 +7,11 @@ body {
 
 .container-navbar {
   display: flex;
-  background-color: rgb(52, 78, 156);
+  background-image: url('asset/ice-cream.jpg');
   width: 100%;
-  justify-content: center;
+  /*justify-content: center;
+  align-items: center;*/
   height: 100vh;
-  align-items: center;
 }
 
 .wrapper {
@@ -20,9 +20,9 @@ body {
   align-items: center;
   font-size: 20px;
   padding: 15px;
-  width: 800px;
+  width: 100%;
   height: 80px;
-  background-color: gray;
+  /*box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.5);*/
 }
 
 .brand {
@@ -60,6 +60,6 @@ body {
   text-decoration: none;
 }
 .navigation > li > a:hover {
-  color: pink;
+  color: crimson;
   transition: all 0.6s ease-in-out;
 }
