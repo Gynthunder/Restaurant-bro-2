@@ -10,12 +10,17 @@
 
 <body>
     <div class="container-navbar">
-        <ul>
-            <li class="li-navbar">Warteg Angin</li>
-            <li class="li-navbar">Login</li>
-            <li class="li-navbar">Logout</li>
-            <li class="li-navbar">Tabel Menu</li>
-        </ul>
+        <nav class="wrapper">
+            <div class="brand">
+                <div class="firstname">Warteg</div>
+                <div class="lastname">Angin</div>
+            </div>
+            <ul class="navigation">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Logout</a></li>
+                <li><a href="#" class="active">Menu</a></li>
+            </ul>
+        </nav>
     </div>
 </body>
 
