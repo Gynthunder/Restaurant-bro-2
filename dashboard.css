@@ -60,6 +60,6 @@ body {
   text-decoration: none;
 }
 .navigation > li > a:hover {
-  color: blueviolet;
+  color: pink;
   transition: all 0.6s ease-in-out;
 }
