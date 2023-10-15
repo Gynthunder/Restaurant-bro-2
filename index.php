@@ -4,37 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard</title>
 </head>
 
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form id="login-form" action="login.php" method="post">
-            <div class="form-group">
-                <label for="username">Username/Email:</label>
-                <input type="text" id="username" name="username" required>
+    <div class="container-navbar">
+        <nav class="wrapper">
+            <div class="brand">
+                <div class="firstname">Warteg</div>
+                <div class="lastname">Angin</div>
             </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="captcha">Captcha:</label>
-                <input type="text" id="captcha" name="captcha" required>
-                <!-- Generate and display the captcha here using JavaScript -->
-            </div>
-            <div class="form-group">
-                <img src="captcha.php" alt="Captcha Image">
-            </div>
-            <div class="form-group">
-                <button type="submit">Login</button>
-            </div>
-        </form>
-        <div class="error-message" id="error-message"></div>
+            <ul class="navigation">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Logout</a></li>
+                <li><a href="#" class="active">Menu</a></li>
+            </ul>
+        </nav>
     </div>
-    <script src="script.js"></script>
 </body>
 
 </html>

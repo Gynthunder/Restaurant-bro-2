@@ -5,7 +5,7 @@
 
 .container-navbar {
     display: flex;
-    background-color: red;
+    background-color: rgb(52, 78, 156);
     width: 100%;
     justify-content: center;
     height: 100vh;
@@ -59,8 +59,6 @@
 }
 .navigation>li>a:hover{
     color: crimson;
+    transition: all .6s ease-in-out;
 }
 
-.active{
-    background-color: c;
-}
