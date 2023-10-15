@@ -57,3 +57,10 @@
     font-size: 20px ;
     text-decoration: none;
 }
+.navigation>li>a:hover{
+    color: crimson;
+}
+
+.active{
+    background-color: c;
+}
