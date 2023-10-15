@@ -11,11 +11,10 @@
 <body>
     <div class="container-navbar">
         <ul>
-            <li>Warteg Angin</li>
-            <li>Login</li>
-            <li>Logout</li>
-            <li>Tabel Menu</li>
-            <p>wanna be yoour</p>
+            <li class="li-navbar">Warteg Angin</li>
+            <li class="li-navbar">Login</li>
+            <li class="li-navbar">Logout</li>
+            <li class="li-navbar">Tabel Menu</li>
         </ul>
     </div>
 </body>
