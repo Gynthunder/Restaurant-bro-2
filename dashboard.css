@@ -5,7 +5,7 @@
 
 .container-navbar {
     display: flex;
-    background-color: #192655;
+    background-color: red;
     width: 100%;
     justify-content: center;
     height: 100vh;
