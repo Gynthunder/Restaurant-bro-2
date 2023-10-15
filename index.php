@@ -16,8 +16,8 @@
                 <div class="lastname">Angin</div>
             </div>
             <ul class="navigation">
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="login-form.php">Login</a></li>
+                <li><a href="#">Team</a></li>
                 <li><a href="#" class="active">Menu</a></li>
             </ul>
         </nav>
