@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand navbar-dark bg-dark sticky-top"  data-aos="fade-down">
+<nav class="navbar navbar-expand navbar-dark sticky-top" style="background-color: #878F70;" data-aos="fade-down">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">RM Mandi Angin</a>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -41,7 +41,7 @@
   <div class="row">
     <!-- Sidebar -->
     <div class="col-lg-3 ">
-    <nav class="navbar navbar-expand-lg  rounded-4 border mt-2">
+    <nav class="navbar navbar-expand-lg   rounded-4 border mt-2" style="background-color: #878F70;">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
