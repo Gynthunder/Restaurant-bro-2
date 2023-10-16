@@ -12,16 +12,16 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav nav-tabs flex-column justify-content-end flex-grow-1">
           <li class="nav-item">
-            <a class="nav-link <?php echo(isset($_GET['x']) && $_GET['x']=='home') ? "link-dark active" : "link-dark"; ?>"  href="index.php?x=home">Home</a>
+            <a class="nav-link <?php echo(isset($_GET['x']) && $_GET['x']=='home') ? "link-dark active" : "link-dark"; ?>"  href="home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link  <?php echo(isset($_GET['x']) && $_GET['x']=='order') ? "link-dark active" : "link-dark"; ?>" href="order.php?x=order">Order</a>
+            <a class="nav-link  <?php echo(isset($_GET['x']) && $_GET['x']=='order') ? "link-dark active" : "link-dark"; ?>" href="order">Order</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?php echo(isset($_GET['x']) && $_GET['x']=='customer') ? "link-dark active" : "link-dark"; ?>" href="customer.php?x=customer">Customer</a>
+            <a class="nav-link <?php echo(isset($_GET['x']) && $_GET['x']=='customer') ? "link-dark active" : "link-dark"; ?>" href="customer">Customer</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?php echo(isset($_GET['x']) && $_GET['x']=='product') ? "link-dark active" : "link-dark"; ?>" href="product.php?x=product">Product</a>
+            <a class="nav-link <?php echo(isset($_GET['x']) && $_GET['x']=='product') ? "link-dark active" : "link-dark"; ?>" href="product">Product</a>
           </li>
         </ul>
       </div>
