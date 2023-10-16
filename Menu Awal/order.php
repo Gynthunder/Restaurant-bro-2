@@ -12,31 +12,9 @@
 </head>
 
 <body style="background-color: #3F2E3E; height: 3000px;">
-<nav class="navbar navbar-expand navbar-dark sticky-top" style="background-color: #878F70;" data-aos="fade-down">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">RM Mandi Angin</a>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-      <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="team.php">Team</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Menu</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button"  data-bs-toggle="dropdown" aria-expanded="false">
-            Username
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end mt-2" >
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><a class="dropdown-item" href="#">Setting</a></li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<!-- Header -->
+<?php include"header.php"; ?>
+<!-- End Header -->
 <div class="container-lg">
   <div class="row">
     <!-- Sidebar -->
@@ -47,10 +25,10 @@
     <div class="col-lg-9  text-white mt-2">
     <div class="card">
   <div class="card-header">
-    Home
+    Order
   </div>
   <div class="card-body">
-    <h5 class="card-title">Ini adalah bagian home</h5>
+    <h5 class="card-title">Ini adalah bagian order</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam quam repellendus maiores suscipit ullam asperiores, soluta saepe perferendis rerum ducimus quae cupiditate consectetur, minima voluptate mollitia vitae optio, distinctio laborum?</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
