@@ -24,6 +24,7 @@
             </ul>
         </nav>
     </div>
+    <img data-aos="fade-down" src="asset/ice-cream.jpg" width="">
 </div>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>

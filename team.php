@@ -20,7 +20,6 @@
                 <button class="btn-back">BACK TO HOME</button>
             </a>
         </div>
-
         <div class="title">
             <h1>ABOUT US</h1>
             <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </h2>

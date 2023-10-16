@@ -2,7 +2,16 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+}
+
+@font-face {
+    font-family: "Futura";
+    src:url("./fonts/futura-medium.ttf");
+}
+
+@font-face {
+    font-family: "Futura Condensed";
+    src:url("./fonts/futura-medium-condensed.ttf");
 }
 
 .workspace{
