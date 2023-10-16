@@ -40,8 +40,8 @@
 <div class="container-lg">
   <div class="row">
     <!-- Sidebar -->
-    <div class="col-lg-3">
-    <nav class="navbar navbar-expand-lg bg-dark rounded-4 border mt-2">
+    <div class="col-lg-3 background-color: red;">
+    <nav class="navbar navbar-expand-lg  rounded-4 border mt-2">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
