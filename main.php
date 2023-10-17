@@ -33,6 +33,9 @@
     }elseif (isset($_GET['x']) && $_GET['x']=='login'){
       include "login.php";
     }
+    else{
+      include "home.php";
+    }
     ?>
             <!-- End Content -->
         </div>
