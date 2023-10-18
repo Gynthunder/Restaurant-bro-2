@@ -22,10 +22,14 @@
 
             <!-- Content -->
             <?php
-    
-      include $page;
-    
-    ?>
+        // Periksa apakah variabel $page telah didefinisikan
+        if (isset($page)) {
+            include $page;
+        } else {
+            // Berikan pesan atau tindakan lain sesuai kebutuhan Anda
+            echo "Halaman tidak ditemukan";
+        }
+        ?>
             <!-- End Content -->
         </div>
         <div class="fixed-bottom text-center text-light">

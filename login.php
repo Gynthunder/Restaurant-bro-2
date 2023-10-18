@@ -25,8 +25,8 @@
             <h1 class="h3 mb-3 fw-normal">Silahkan Log In</h1>
 
             <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com"
-                    required>
+                <input type="email" class="form-control" id="floatingInput" name="username"
+                    placeholder="name@example.com" required>
                 <label for="floatingInput">Email address</label>
                 <div class="invalid-feedback"> Masukkan Email Yang Valid! </div>
             </div>
@@ -43,66 +43,23 @@
                     <input type="checkbox" value="remember-me"> Remember me
                 </label>
             </div>
+            <!-- Pertanyaan Keamanan -->
+            <label for="security_question">Apa hasil dari 5 + 3?</label>
+            <input type="text" id="security_question" name="security_question" required><br><br>
 
-            <div class="form-group">
-                <label for="captcha">Captcha:</label>
-                <input type="text" id="captcha" name="captcha" required>
-                <img src="captcha.php" alt="Captcha Image" id="captcha-image">
+            <!-- Honeypot Field -->
+            <div style="display:none;">
+                <label for="honeypot">Leave this field blank:</label>
+                <input type="text" id="honeypot" name="honeypot">
             </div>
 
-            <div class="error-message" id="error-message"></div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit" name="submit_validation" value="abcd">Log
+                In</button>
 
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Log In</button>
 
             <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
 
-            <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const loginForm = document.getElementById("login-form");
-                const captchaInput = document.getElementById("captcha");
-                const errorMessage = document.getElementById("error-message");
-                const captchaImage = document.getElementById("captcha-image");
 
-                // Attach a click event listener to the captcha image to reload it
-                captchaImage.addEventListener("click", function() {
-                    loadCaptchaImage();
-                    captchaInput.value = "";
-                });
-
-                // Attach a submit event listener to the login form
-                loginForm.addEventListener("submit", async function(event) {
-                    event.preventDefault();
-
-                    // Prevent the form from submitting initially
-                    const userCaptcha = captchaInput.value.toLowerCase();
-
-                    const xhr = new XMLHttpRequest();
-                    xhr.open("POST", "validate_captcha.php");
-                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                    xhr.onload = function() {
-                        if (xhr.status === 200) {
-                            const response = JSON.parse(xhr.responseText);
-
-                            if (response.success) {
-                                // If the captcha is correct, submit the form
-                                loginForm.submit();
-                            } else {
-                                // If the captcha is incorrect, display an error message
-                                errorMessage.textContent = "Captcha yang Anda masukkan salah.";
-                                captchaInput.value = "";
-                                loadCaptchaImage();
-                            }
-                        }
-                    };
-                    xhr.send("captcha=" + userCaptcha);
-                });
-
-                // Function to load the captcha image
-                function loadCaptchaImage() {
-                    captchaImage.setAttribute("src", "captcha.php?" + new Date().getTime());
-                }
-            });
-            </script>
         </form>
     </main>
 

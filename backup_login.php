@@ -1,3 +1,4 @@
+<!-- login_form.php -->
 <!doctype html>
 <html lang="en">
 
@@ -7,58 +8,34 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>RM. Mandi Angin </title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
-
-
+    <title>RM. Mandi Angin</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Dashboard</title>
-
-    <style>
-    .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-    }
-
-    @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-        }
-    }
-    </style>
-
 
     <!-- Custom styles for this template -->
     <link href="asset/css/login.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
-
     <main class="form-signin">
-        <form class="needs-validation" novalidate action="proses/proses_login.php" method="POST">
+        <form class="needs-validation" novalidate action="proses/proses_login.php" method="POST" id="login-form">
             <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
             <h1 class="h3 mb-3 fw-normal">Silahkan Log In</h1>
 
             <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com"
+                    required>
                 <label for="floatingInput">Email address</label>
-                <div class="invalid-feedback">
-                    Masukkan Email Yang Valid!
-                </div>
+                <div class="invalid-feedback"> Masukkan Email Yang Valid! </div>
             </div>
+
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password"
+                    required>
                 <label for="floatingPassword">Password</label>
-                <div class="invalid-feedback">
-                    Masukkan Password Yang Benar!
-                </div>
+                <div class="invalid-feedback"> Masukkan Password Yang Benar! </div>
             </div>
 
             <div class="checkbox mb-3">
@@ -66,25 +43,74 @@
                     <input type="checkbox" value="remember-me"> Remember me
                 </label>
             </div>
+
             <div class="form-group">
                 <label for="captcha">Captcha:</label>
                 <input type="text" id="captcha" name="captcha" required>
-                <!-- Generate and display the captcha here using JavaScript -->
-            </div>
-            <div class="form-group">
-                <img src="captcha.php" alt="Captcha Image">
+                <img src="captcha.php" alt="Captcha Image" id="captcha-image">
             </div>
 
             <div class="error-message" id="error-message"></div>
-            </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Log In</button>
+
+            <button class="w-100 btn btn-lg btn-primary" type="submit" name="submit_validation" value="abcd"
+                required>Log
+                In</button>
+
+
             <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+
+            <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const loginForm = document.getElementById("login-form");
+                const captchaInput = document.getElementById("captcha");
+                const errorMessage = document.getElementById("error-message");
+                const captchaImage = document.getElementById("captcha-image");
+
+                // Attach a click event listener to the captcha image to reload it
+                captchaImage.addEventListener("click", function() {
+                    loadCaptchaImage();
+                    captchaInput.value = "";
+                });
+
+                // Attach a submit event listener to the login form
+                loginForm.addEventListener("submit", async function(event) {
+                    event.preventDefault();
+
+                    // Prevent the form from submitting initially
+                    const userCaptcha = captchaInput.value.toLowerCase();
+
+                    const xhr = new XMLHttpRequest();
+                    xhr.open("POST", "validate_captcha.php");
+                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    xhr.onload = function() {
+                        if (xhr.status === 200) {
+                            const response = JSON.parse(xhr.responseText);
+
+                            if (response.success) {
+                                // If the captcha is correct, submit the form
+                                loginForm.submit();
+                            } else {
+                                // If the captcha is incorrect, display an error message
+                                errorMessage.textContent = "Captcha yang Anda masukkan salah.";
+                                captchaInput.value = "";
+                                loadCaptchaImage();
+                            }
+                        }
+                    };
+                    xhr.send("captcha=" + userCaptcha);
+                });
+
+                // Function to load the captcha image
+                function loadCaptchaImage() {
+                    captchaImage.setAttribute("src", "captcha.php?" + new Date().getTime());
+                }
+            });
+            </script>
         </form>
     </main>
 
-    <script src="script.js"></script>
+    <!-- Example starter JavaScript for disabling form submissions if there are invalid fields -->
     <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function() {
         'use strict'
 
@@ -105,8 +131,6 @@
             })
     })()
     </script>
-
 </body>
-
 
 </html>
