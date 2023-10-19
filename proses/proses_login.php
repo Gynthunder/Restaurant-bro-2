@@ -30,10 +30,10 @@ if (!$query) {
 
             header('location:../home');
         }else{ ?>
-<!-- <script>
+<script>
 alert('Username atau Password yang anda masukkan salah!');
 window.location = '../login'
-</script> -->
+</script>
 
 <?php
         }
