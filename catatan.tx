@@ -1,0 +1,28 @@
+// Code untuk sql injecction
+// Koneksi ke database (gantilah dengan informasi koneksi Anda)
+$mysqli = new mysqli("localhost", "username", "password", "database");
+
+if ($mysqli->connect_error) {
+    die("Koneksi ke database gagal: " . $mysqli->connect_error);
+}
+
+// Gunakan parameterisasi query SQL untuk menghindari SQL injection
+$query = "SELECT * FROM users WHERE username = ? AND password = ?";
+$stmt = $mysqli->prepare($query);
+$stmt->bind_param("ss", $username, $password);
+
+if ($stmt->execute()) {
+    $result = $stmt->get_result();
+
+    if ($result->num_rows == 1) {
+        echo "Login berhasil!";
+    } else {
+        echo "Username atau Password yang Anda masukkan salah!";
+    }
+} else {
+    echo "Gagal menjalankan query: " . $stmt->error;
+}
+
+$stmt->close();
+$mysqli->close();
+?>
