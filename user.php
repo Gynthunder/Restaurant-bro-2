@@ -26,11 +26,80 @@ while($record = mysqli_fetch_array($query)){
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <form action="proses/proses_input_user.php" method="POST">
+                                <div class="row">
+                                    <div class="col-lg-6">
+
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput"
+                                                placeholder="Your Name" name="nama">
+                                            <label for="floatingInput">Nama</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+
+
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingInput"
+                                                placeholder="name@example.com" name="username">
+                                            <label for="floatingInput">Username</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- pembatas -->
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-floating mb-3">
+                                            <select class="form-select" aria-label="Default select example"
+                                                name="level">
+                                                <option selected hidden value="0">Pilih Level User</option>
+                                                <option value="1">Admin</option>
+                                                <option value="2">Kasir</option>
+                                                <option value="3">Pelayan</option>
+                                                <option value="4">Dapur</option>
+                                            </select>
+                                            <label for="floatingInput">Level User</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+
+
+                                        <div class="form-floating mb-3">
+                                            <input type="number" class="form-control" id="floatingInput"
+                                                placeholder="08xxxxxxxx" name="nohp">
+                                            <label for="floatingInput">No. Hp</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control" id="floatingInput"
+                                                placeholder="Password" disabled value="12345" name="password">
+                                            <label for="floatingPassword">Password</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- pembatas -->
+
+
+
+
+                                <div class="form-floating">
+                                    <textarea class="form-control" name="" id="" style="height:100px"
+                                        name="alamat"></textarea>
+                                    <label for="floatingInput">Alamat</label>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary" name="input_user_validate"
+                                        value="1234">Save
+                                        changes</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -85,10 +154,10 @@ while($record = mysqli_fetch_array($query)){
                         ?>
                         <tr>
                             <th scope="row"><?php echo $no++ ?></th>
-                            <td><?php echo $row['Nama'] ?></td>
+                            <td><?php echo $row['nama'] ?></td>
                             <td><?php echo $row['username'] ?></td>
                             <td><?php echo $row['level'] ?></td>
-                            <td><?php echo $row['Nomor Hp'] ?></td>
+                            <td><?php echo $row['nohp'] ?></td>
                             <td class="d-flex">
                                 <button class="btn btn-info btn-sm me-1" data-bs-toggle="modal"
                                     data-bs-target="#ModalView"><svg xmlns="http://www.w3.org/2000/svg" width="16"
