@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(empty($_SESSION['username_rm'])){
+    header('location:login');
+}
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
 <!DOCTYPE html>
 <html lang="en">
 

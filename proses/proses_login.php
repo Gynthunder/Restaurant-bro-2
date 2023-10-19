@@ -1,4 +1,6 @@
 <?php 
+session_start();
+
 include "connect.php";
 // Validasi Pertanyaan Keamanan
 $securityAnswer = $_POST['security_question'];
@@ -27,6 +29,7 @@ if (!$query) {
         $hasil = mysqli_fetch_array ($query);
         if($hasil) {
             echo "Query: SELECT * FROM tb_user WHERE username = '$username' && password = '$password'";
+            $_SESSION['username_rm'] = $username;
 
             header('location:../home');
         }else{ ?>
