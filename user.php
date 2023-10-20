@@ -281,7 +281,7 @@ while($record = mysqli_fetch_array($query)){
                 <div class="modal-dialog modal-md modal-fullscreen-md-down">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Data User</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Data User</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -310,6 +310,43 @@ while($record = mysqli_fetch_array($query)){
             </div>
 
             <!-- Akhir Modal Delete -->
+
+            <!-- Modal Reset Password -->
+<div class="modal fade" id="ModalResetPassword<?php echo $row['id']?>" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md modal-fullscreen-md-down">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Reset Password</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <form action="proses/proses_reset_password.php" method="POST">
+                        <input type="hidden" value="<?php echo $row['id'] ?>" name="id">
+                                <div class="col-lg-12">
+                                    <?php
+                                    if($row['username'] == $_SESSION['username_rm']){
+                                        echo "<div class='alert alert-danger'>Anda tidak dapat mereset password sendiri</div>";
+                                    }else{
+                                        echo "Apakah anda yakin ingin mereset password user <b>$row[username]</b> 
+                                        menjadi password bawaan sistem yaitu <b>password</b>";
+                                    }
+                                    ?>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-success" name="input_user_validate"
+                                        value="1234" <?php echo($row['username'] == $_SESSION['username_rm']) ?
+                                        'disabled' : '' ; ?>>Reset Password</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Akhir Modal Reset Password -->
 
             <?php
             }
@@ -381,11 +418,18 @@ while($record = mysqli_fetch_array($query)){
                                         <path fill-rule="evenodd"
                                             d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                                     </svg></button>
-                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                <button class="btn btn-danger btn-sm me-1" data-bs-toggle="modal"
                                     data-bs-target="#ModalDelete<?php echo $row['id']?>"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                         height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                                         <path
                                             d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                                    </svg></button>
+                                <button class="btn btn-secondary btn-sm me-1" data-bs-toggle="modal"
+                                    data-bs-target="#ModalResetPassword<?php echo $row['id']?>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
+                                        <path 
+                                            d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z"/>
+                                        <path 
+                                            d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
                                     </svg></button>
                             </td>
                         </tr>
