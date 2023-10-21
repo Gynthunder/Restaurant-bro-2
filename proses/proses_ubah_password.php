@@ -15,23 +15,19 @@ if(!empty($_POST['ubah_password_validate'])){
       $query = mysqli_query($conn, "UPDATE tb_user SET password='$passwordbaru' WHERE 
       username = '$_SESSION[username_rm]'");
       if($query){
-        $message = '<script>alert("Password berhasil diubah")
-                    window.history.back()</script>;
-                    </script>';
+        $message = '<script>alert("Password berhasil diubah");
+                    window.history.back()"</script>';
       }else{
-        $message = '<script>alert("Password gagal diubah")
-                    window.history.back()</script>;
-                    </script>';
+        $message = '<script>alert("Password gagal diubah");
+                    window.history.back()"</script>';
       }
     }else{
-      $message = '<script>alert("Password baru tidak sama")
-                    window.history.back()</script>;
-                    </script>';
+      $message = '<script>alert("Password baru tidak sama");
+                  window.history.back()"</script>';
     }
   } else {
-      $message = '<script>alert("Password lama tidak sesuai")
-                    window.history.back()</script>;
-                    </script>';
+    $message = '<script>alert("Password lama tidak sesuai");
+                window.history.back()"</script>';
   }
 }else{
   header('location:../home');

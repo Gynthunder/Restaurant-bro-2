@@ -6,7 +6,7 @@ while($record = mysqli_fetch_array($query)){
     $result[] = $record;
 }
 
-$select_kat_menu = mysqli_query($conn, "SELECT kategori_menu FROM tb_kategori_menu");
+$select_kat_menu = mysqli_query($conn, "SELECT id, kategori_menu FROM tb_kategori_menu");
 ?>
 <div class="col-lg-9  text-white mt-2">
     <div class="card">
@@ -28,7 +28,7 @@ $select_kat_menu = mysqli_query($conn, "SELECT kategori_menu FROM tb_kategori_me
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="proses/proses_input_user.php" method="POST">
+                            <form action="proses/proses_input_menu.php" method="POST" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="input-group mb-3">
@@ -60,7 +60,7 @@ $select_kat_menu = mysqli_query($conn, "SELECT kategori_menu FROM tb_kategori_me
                                             <option selected hidden value="">Pilih Kategori Menu</option>
                                             <?php
                                             foreach($select_kat_menu as $value){
-                                                echo "<option value='" . $value['kategori_menu'] . "'>" . $value['kategori_menu'] . "</option>";
+                                                echo "<option value='" . $value['id'] . "'>" . $value['kategori_menu'] . "</option>";
                                             }
                                             ?>
                                             </select>
@@ -85,7 +85,7 @@ $select_kat_menu = mysqli_query($conn, "SELECT kategori_menu FROM tb_kategori_me
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary" name="input_user_validate"
+                                    <button type="submit" class="btn btn-primary" name="input_menu_validate"
                                         value="1234">Save
                                         changes</button>
                                 </div>
