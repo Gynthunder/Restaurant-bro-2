@@ -19,7 +19,8 @@ if(!empty($_POST ['input_user_validate'])){
       $message = '<script>alert("Data berhasil diupdate");
                   window.location="../user"</script>';
     }else{
-      $message = '<script>alert("Data gagal diupdate")</script>';
+      $message = '<script>alert("Data gagal diupdate");
+                  window.location="../user"</script>';
     }
   }
 }
