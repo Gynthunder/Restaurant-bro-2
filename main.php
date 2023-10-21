@@ -27,7 +27,7 @@ $hasil = mysqli_fetch_array($query);
 <body style="background-color: #3F2E3E; height: 3000px;">
     <?php include"header.php"; ?>
     <div class="container-lg">
-        <div class="row">
+        <div class="row mb-5">
             <!-- Sidebar -->
             <?php include"sidebar.php"; ?>
             <!-- End Sidebar -->
