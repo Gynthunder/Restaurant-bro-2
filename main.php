@@ -44,7 +44,7 @@ $hasil = mysqli_fetch_array($query);
         ?>
             <!-- End Content -->
         </div>
-        <div class="fixed-bottom text-center text-light">
+        <div class="fixed-bottom text-center bg-light py-2">
             Copywrite 2023 Brazky Boyss
         </div>
     </div>
