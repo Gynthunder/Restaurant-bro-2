@@ -5,6 +5,10 @@ if(empty($_SESSION['username_rm'])){
 }
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
+include "proses/connect.php";
+$query = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$_SESSION[username_rm]'");
+$hasil = mysqli_fetch_array($query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
