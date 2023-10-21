@@ -4,13 +4,13 @@ include "connect.php";
     
     
     if(!empty($_POST ['input_user_validate'])){
-        $query = mysqli_query($conn, "DELETE FROM tb_user WHERE id = '$id'");
+        $query = mysqli_query($conn, "DELETE FROM tb_daftar_menu WHERE id = '$id'");
         if($query){
           $message = '<script>alert("Data berhasil dihapus");
-                      window.location="../user"</script>';
+                      window.location="../menu"</script>';
         }else{
           $message = '<script>alert("Data gagal dihapus");
-                      window.location="../user"</script>';
+                      window.location="../menu"</script>';
         }
     }echo $message;
 ?>

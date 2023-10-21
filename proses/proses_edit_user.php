@@ -14,7 +14,7 @@ if(!empty($_POST ['input_user_validate'])){
     $message = '<script>alert("Username yang dimasukkan telah ada");
                 window.location="../user"</script>';
   }else{
-    $query = mysqli_query($conn, "UPDATE tb_user SET nama='$name', username='$username', level='$level', nohp='$nohp', alamat='$alamat' WHERE id='$id'");
+    $query = mysqli_query($conn, "UPDATE tb_user SET nama='$nama', username='$username', level='$level', nohp='$nohp', alamat='$alamat' WHERE id='$id'");
     if($query){
       $message = '<script>alert("Data berhasil diupdate");
                   window.location="../user"</script>';
