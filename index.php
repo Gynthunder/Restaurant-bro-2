@@ -25,6 +25,9 @@
     }elseif (isset($_GET['x']) && $_GET['x']=='katmenu'){
       $page = "katmenu.php";
       include "main.php";
+    }elseif (isset($_GET['x']) && $_GET['x']=='orderitem'){
+      $page = "order_item.php";
+      include "main.php";
     }
     else{
       include "main.php";

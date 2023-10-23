@@ -30,6 +30,7 @@ if (!$query) {
         if($hasil) {
             echo "Query: SELECT * FROM tb_user WHERE username = '$username' && password = '$password'";
             $_SESSION['username_rm'] = $username;
+            $_SESSION['id_rm'] = $hasil['id'];
 
             header('location:../home');
         }else{ ?>
