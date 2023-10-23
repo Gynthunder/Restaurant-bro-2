@@ -1,17 +1,22 @@
 <?php
 include "proses/connect.php";
 $query = mysqli_query($conn, "SELECT *, SUM(harga*jumlah) AS harganya FROM tb_list_order
-    LEFT JOIN tb_order ON tb_order.id_order = tb_list_order.kode_order.menu
+    LEFT JOIN tb_order ON tb_order.id_order = tb_list_order.kode_order
+    LEFT JOIN tb_daftar_menu ON tb_daftar_menu.id = tb_list_order.menu
     GROUP BY id_list_order
-    HAVING tb_list_order.order = $_GET[order]");
+    HAVING tb_list_order.kode_order = $_GET[order]");
+
+$kode = $_GET['order'];
+$meja = $_GET['meja'];
+$pelanggan= $_GET['pelanggan'];
 while($record = mysqli_fetch_array($query)){
     $result[] = $record;
-    $kode = $record['kode_order'];
-    $meja = $record['meja'];
-    $pelanggan= $record['pelanggan'];
+    // $kode = $record['id_order'];
+    // $meja = $record['meja'];
+    // $pelanggan= $record['pelanggan'];
 }
 
-// $select_kat_menu = mysqli_query($conn, "SELECT id_kat_menu, kategori_menu FROM tb_kategori_menu");
+$select_menu = mysqli_query($conn, "SELECT nama_menu FROM tb_daftar_menu");
 ?>
 <div class="col-lg-9  text-white mt-2">
     <div class="card">
