@@ -189,7 +189,7 @@ while ($record = mysqli_fetch_array($query)) {
                                         <?php echo $row['nama'] ?>
                                     </td>
                                     <td>
-                                        <?php echo (!empty($row['id_bayar'])) ? "<span class='badge text-bg-success'>Dibayar</span?" : "" ; ?>
+                                        <?php echo (!empty($row['id_bayar'])) ? "<span class='badge text-bg-success'>Dibayar</span>" : "<span class='badge text-bg-danger'>Belum Dibayar</span>" ; ?>
                                     </td>
                                     <td>
                                         <?php echo $row['waktu_order'] ?>
