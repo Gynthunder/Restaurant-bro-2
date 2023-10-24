@@ -70,6 +70,59 @@ ini_set('display_errors', 1);
 
 
         </form>
+
+        <!-- Tombol untuk membuka formulir pendaftaran -->
+        <button type="button" class="btn btn-secondary mt-3" data-bs-toggle="modal" data-bs-target="#registerModal">
+            Register
+        </button>
+
+        <!-- Modal Formulir Pendaftaran -->
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="registerModalLabel">Formulir Pendaftaran</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Formulir Pendaftaran -->
+                        <form action="proses/register_process.php" method="POST">
+                            <div class="mb-3">
+                                <label for="namadepan" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="namadepan" name="namadepan" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="namabelakang" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="namabelakang" name="namabelakang" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username/Email</label>
+                                <input type="email" class="form-control" id="username" name="username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="registerPassword" name="password"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ttl" class="form-label">Tanggal Lahir</label>
+                                <input type="date" class="form-control" id="ttl" name="ttl" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="kelamin" class="form-label">Jenis Kelamin</label>
+                                <select class="form-select" id="kelamin" name="kelamin" required>
+                                    <option value="male">Laki-laki</option>
+                                    <option value="female">Perempuan</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </form>
+                        <!-- Akhir Formulir Pendaftaran -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Example starter JavaScript for disabling form submissions if there are invalid fields -->
@@ -94,6 +147,14 @@ ini_set('display_errors', 1);
             })
     })()
     </script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
+
+
 </body>
 
 </html>
