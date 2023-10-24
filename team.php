@@ -22,37 +22,33 @@
         </div>
         <div class="title">
             <h1>ABOUT US</h1>
-            <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </h2>
+            <h2>Kelompok ini dibentuk untuk memenuhi nilai tugas dar mata kuliah Web Programming</h2>
         </div>
     </div>
 
     <div class="teams">
         <div class="desc">
             <h1 class="centered">OUR TEAM</h1>
-            <h2 class="centered mw">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </h2>
+            <h2 class="centered mw">Inilah wajah dari kelompok RM Mandi Angin </h2>
         </div>
     </div>
 
     <div class="grid">
         <div class="card">
             <img width="100%" src="asset/team-1.png" alt="team-1">
-            <h5 class="mt-10">Randi Ragatha Ananto</h5>
-            <p>Chief Officer (CEO)</p>
+            <h5 class="mt-10">Reynaldo</h5>
         </div>
         <div class="card">
             <img width="100%" src="asset/team-2.png" alt="team-2">
-            <h5 class="mt-10">Randi Ragatha Ananto</h5>
-            <p>Chief Officer (CEO)</p>
+            <h5 class="mt-10">Ammar Fadilah</h5>
         </div>
         <div class="card">
             <img width="100%" src="asset/team-3.png" alt="team-3">
-            <h5 class="mt-10">Randi Ragatha Ananto</h5>
-            <p>Chief Officer (CEO)</p>
+            <h5 class="mt-10">Vinsensius Paulo</h5>
         </div>
         <div class="card">
             <img width="100%" src="asset/team-4.png" alt="team-4">
-            <h5 class="mt-10">Randi Ragatha Ananto</h5>
-            <p>Chief Officer (CEO)</p>
+            <h5 class="mt-10">Maryadi</h5>
         </div>
     </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

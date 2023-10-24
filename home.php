@@ -4,9 +4,10 @@
     Home
   </div>
   <div class="card-body">
-    <h5 class="card-title">Ini adalah bagian home</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam quam repellendus maiores suscipit ullam asperiores, soluta saepe perferendis rerum ducimus quae cupiditate consectetur, minima voluptate mollitia vitae optio, distinctio laborum?</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <img src="asset/rumah_makan.jpg" width="100%">
+    <p class="card-text">Halo selamat datang di RM Mandi Angin! Kami menyediakan makanan dari makanan nusantara sampai makanan luar.
+      Semoga kalian yang sudah beli mendapatkan pahala dan berjatuhan rezeki ya!
+    </p>
   </div>
 </div>
     </div>
