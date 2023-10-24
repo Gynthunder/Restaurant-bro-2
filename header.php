@@ -1,23 +1,17 @@
 <nav class="navbar navbar-expand navbar-dark sticky-top" style="background-color: #878F70;" data-aos="fade-down">
     <div class="container-fluid">
-        <a class="navbar-brand" href=".">RM Mandi Angin</a>
+        <a class="navbar-brand" href="home">RM Mandi Angin</a>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="team.php">Team</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Menu</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Username
+                        More
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end mt-2">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                    data-bs-target="#ModalUbahPassword"><i class="bi bi-key"></i>Ubah Password</a></li>
                         <li><a class="dropdown-item" href="logout">Logout</a></li>
                     </ul>
                 </li>

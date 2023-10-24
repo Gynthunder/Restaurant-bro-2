@@ -16,7 +16,7 @@
 <body>
     <div class="bg">
         <div class="nav">
-            <a href="index.php">
+            <a href="home">
                 <button class="btn-back">BACK TO HOME</button>
             </a>
         </div>
@@ -29,25 +29,21 @@
     <div class="teams">
         <div class="desc">
             <h1 class="centered">OUR TEAM</h1>
-            <h2 class="centered mw">Inilah wajah dari kelompok RM Mandi Angin </h2>
+            <h2 class="centered mw">Inilah anggota dari kelompok RM Mandi Angin </h2>
         </div>
     </div>
 
     <div class="grid">
         <div class="card">
-            <img width="100%" src="asset/team-1.png" alt="team-1">
             <h5 class="mt-10">Reynaldo</h5>
         </div>
         <div class="card">
-            <img width="100%" src="asset/team-2.png" alt="team-2">
-            <h5 class="mt-10">Ammar Fadilah</h5>
+            <h5 class="mt-10">Amar Fadillah</h5>
         </div>
         <div class="card">
-            <img width="100%" src="asset/team-3.png" alt="team-3">
-            <h5 class="mt-10">Vinsensius Paulo</h5>
+            <h5 class="mt-10">Vinsensius Paulo R.V.</h5>
         </div>
         <div class="card">
-            <img width="100%" src="asset/team-4.png" alt="team-4">
             <h5 class="mt-10">Maryadi</h5>
         </div>
     </div>

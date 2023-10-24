@@ -26,20 +26,12 @@
                                 href="user">User</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo(isset($_GET['x']) && $_GET['x']=='customer') ? "link-dark active" : "link-dark"; ?>"
-                                href="customer">Customer</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link <?php echo(isset($_GET['x']) && $_GET['x']=='menu') ? "link-dark active" : "link-dark"; ?>"
                                 href="menu">Menu</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link <?php echo(isset($_GET['x']) && $_GET['x']=='katmenu') ? "link-dark active" : "link-dark"; ?>"
                                 href="katmenu">Menu Category</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link <?php echo(isset($_GET['x']) && $_GET['x']=='report') ? "link-dark active" : "link-dark"; ?>"
-                                href="report">Report</a>
                         </li>
 
                     </ul>
